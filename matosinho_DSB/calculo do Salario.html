@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do Salário</title>
+</head>
+<body>
+    Digite o código do funcionário <input id="codFunc" type="number"> <br/><p>
+    Digite o numero de horas trabalhadas <input id="ht" type="number"> <br/><p>
+    <button onclick="calHt()">Calcular</button>
+
+    <script>
+        function calHt(){
+            var nh = parseFloat(document.getElementById("ht").value);
+        var cf = parseFloat(document.getElementById("codFunc").value);
+        e=0;
+        if (nh>50){
+            e=nh-50;
+            sal = 50*10;
+            sale = sal + (e*20);
+            alert ("O Salário do funcionário com código "+ cf+ "\n é "+sale)
+        }
+        else{
+            if (nh<=50 ){
+                sal = 50*10;
+            alert("Não houve registro de horas extras, o salário é \n"+ sal)
+        }
+    }
+        }
+        
+        </script>
+</body>
+</html>
